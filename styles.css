@@ -526,6 +526,65 @@ img {
     margin-left: -1em;
 }
 
+/* Tour Packages */
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tour-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.tour-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.tour-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tour-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.tour-detail-item i {
+    color: var(--accent);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.tour-card .btn {
+    margin-top: auto;
+}
+
 /* Why Choose Us */
 .why-us-grid {
     display: grid;
@@ -732,9 +791,15 @@ img {
     gap: 1rem;
 }
 
-.contact-card i {
-    color: var(--accent);
-    margin-top: 0.2rem;
+.contact-card i,
+.contact-card svg {
+    color: var(--primary);
+    stroke: var(--primary);
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    flex-shrink: 0;
+    margin-top: 3px;
 }
 
 .contact-card h5 {
@@ -998,6 +1063,10 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .tours-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1045,7 +1114,7 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .features-grid, .why-us-grid, .audience-grid, .reviews-grid {
+    .features-grid, .why-us-grid, .audience-grid, .reviews-grid, .tours-grid {
         grid-template-columns: 1fr;
     }
     

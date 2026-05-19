@@ -1,5 +1,5 @@
 // Initialize Lucide Icons
-lucide.createIcons();
+if (window.lucide) { lucide.createIcons(); }
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -52,25 +52,7 @@ accordionHeaders.forEach(header => {
     });
 });
 
-// Form Submission Prevention (Placeholder)
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = contactForm.querySelector('button[type="submit"]');
-        const originalText = btn.innerText;
-        btn.innerText = "Request Sent!";
-        btn.style.backgroundColor = "#123C2F";
-        btn.style.color = "#FFFFFF";
-        
-        setTimeout(() => {
-            btn.innerText = originalText;
-            btn.style.backgroundColor = "";
-            btn.style.color = "";
-            contactForm.reset();
-        }, 3000);
-    });
-}
+
 
 // Scroll Reveal Animations
 const revealElements = document.querySelectorAll('.section-title, .section-intro, .feature-card, .meal-card, .why-card, .audience-card, .review-card, .step, .contact-card, .about-text p, .about-image-wrapper img');
